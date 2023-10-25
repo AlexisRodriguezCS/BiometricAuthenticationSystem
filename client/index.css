@@ -1,0 +1,148 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Body styles */
+body {
+  background-color: hsl(0, 0%, 90%) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Page container */
+.page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  height: 85%;
+  /* background-color: green; */
+  /* padding: 20px; */
+}
+
+/* Left container */
+.left-container {
+  text-align: left;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: aqua; */
+  padding: 10%;
+}
+
+.left-container h1 {
+  font-size: calc(1.525rem + 2.8vw);
+  font-weight: 700;
+  color: rgba(59, 113, 202);
+  /* margin: 10px 0; */
+  /* letter-spacing: -0.025em; */
+}
+
+.left-container h1:first-child {
+  color: #4f4f4f;
+}
+
+.left-container p {
+  padding-top: 5%;
+  color: hsl(217, 10%, 50.8%);
+  /* margin: 10px 0; */
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Right container (for the login or sign-up form) */
+.right-container {
+  /* background-color: rgb(0, 0, 209); */
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  /* Add your form styles here */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form,
+.success,
+.user-profile,
+.face-scan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  height: 85%;
+}
+
+.form-title {
+  font-size: calc(1rem + 1.5vw);
+  font-weight: 700;
+  color: #4f4f4f;
+}
+
+.form-group input {
+  background-color: hsl(0, 0%, 90%) !important;
+}
+
+.btn,
+.form-group {
+  width: 75% !important;
+}
+
+/* Loading Modal Styles */
+.loading-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-content {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 15%;
+  height: 20%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

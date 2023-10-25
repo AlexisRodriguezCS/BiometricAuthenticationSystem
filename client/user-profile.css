@@ -1,0 +1,43 @@
+/* user-profile.css */
+.user-profile {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Style the welcome message */
+h1 {
+  font-size: calc(1rem + 1.5vw);
+  font-weight: 700;
+  color: #4f4f4f;
+}
+
+ul {
+  width: 80%;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Spacing between items as needed */
+  border-bottom: 1px solid #ccc; /* Add a horizontal line between items */
+  padding-bottom: 5px; /* Add some spacing between the text and the line */
+}
+
+p {
+  margin: 0;
+}
+
+#username,
+#email,
+#user-id,
+#account-creation-date {
+  color: #4f4f4f;
+  font-weight: 700;
+}

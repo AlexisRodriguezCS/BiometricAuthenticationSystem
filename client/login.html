@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In Form</title>
+  </head>
+  <body>
+    <!-- Log In Form -->
+    <form class="bg-white rounded-5 shadow-5-strong p-5 login">
+      <h2 class="form-title">Log In</h2>
+      <div class="form-group">
+        <label for="logInUsernameEmail">Username or Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="logInUsernameEmail"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="form-group">
+        <label for="logInPassword">Password</label>
+        <input type="password" class="form-control" id="logInPassword" />
+      </div>
+      <button
+        type="submit"
+        onclick="handleLogIn(event)"
+        id="logInButton"
+        class="btn btn-primary btn-block"
+      >
+        Log In
+      </button>
+      <button
+        type="button"
+        onclick="loadFaceScanContent()"
+        class="btn btn-success btn-block"
+      >
+        Use Face Scan
+      </button>
+      <span data-component="error" style="display: none; color: red"></span>
+      <p>Not a member? <a href="#!" data-component="signup">Register</a></p>
+    </form>
+  </body>
+</html>

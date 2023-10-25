@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Face Scan</title>
+    <link rel="stylesheet" href="face-scan.css" />
+  </head>
+  <body>
+    <div class="face-scan">
+      <h1>Welcome to Face Scan</h1>
+      <p class="start-text">Before you proceed, please ensure the following:</p>
+      <ul>
+        <li class="instructions">
+          Your webcam is turned on and connected to your device.
+        </li>
+        <li class="instructions">
+          Your webcam is correctly positioned and pointed at your face.
+        </li>
+        <li class="instructions">
+          Lighting in your environment is adequate for a clear scan.
+        </li>
+      </ul>
+      <div class="user-btns-container">
+        <button
+          onclick="setupBiometricAuthentication()"
+          id="setup-biometrics"
+          class="btn btn-success"
+        >
+          Start Scan
+        </button>
+        <button
+          id="user-account-info"
+          class="btn btn-primary"
+          onclick="loadUserProfileContent()"
+        >
+          Account info
+        </button>
+      </div>
+      <div class="login-btns-container">
+        <button
+          id="authenticate-biometrics"
+          class="btn btn-primary"
+          onclick="authenticateWithBiometrics()"
+        >
+          Start Scan
+        </button>
+        <button
+          id="credentials-button"
+          class="btn btn-primary"
+          onclick="loadLoginForm()"
+        >
+          Use credentials
+        </button>
+      </div>
+      <div id="select-container">
+        <label for="camera-select">Select a Webcam:</label>
+        <select id="webcam-select"></select>
+      </div>
+      <video id="video-element" autoplay playsinline></video>
+      <span data-component="feedback" style="display: none; color: red"></span>
+    </div>
+  </body>
+</html>

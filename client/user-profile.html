@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user-profile.css" />
+  </head>
+  <body>
+    <div class="user-profile">
+      <h1>Account info</h1>
+      <ul>
+        <li>
+          <p>Username</p>
+          <span id="username"></span>
+        </li>
+        <li>
+          <p>Email</p>
+          <span id="email"></span>
+        </li>
+        <li>
+          <p>User ID</p>
+          <span id="user-id"></span>
+        </li>
+        <li>
+          <p>Account Created On</p>
+          <span id="account-creation-date"></span>
+        </li>
+      </ul>
+      <button onclick="handleDeleteAccount()" class="btn btn-danger btn-block">
+        Delete Account
+      </button>
+      <button onclick="loadFaceScanContent()" class="btn btn-primary btn-block">
+        Redo Face Scan
+      </button>
+      <button onclick="handleLogout()" class="btn btn-primary btn-block">
+        Log Out
+      </button>
+    </div>
+  </body>
+</html>
