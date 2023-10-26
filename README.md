@@ -119,6 +119,8 @@ The back-end of the application is organized into the following directories:
 
 ## Getting Started
 
+To access the online hosted version of the project, click [here](https://biometricauthenticationsystem.netlify.app/).
+
 To set up a project locally, follow these simple steps.
 
 ### Prerequisites
