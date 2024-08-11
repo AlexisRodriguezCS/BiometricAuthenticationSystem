@@ -29,7 +29,7 @@ function handleSignUp(event) {
   };
 
   // Send a POST request to the signup route
-  fetch("https://biometric-app.onrender.com/user/register", {
+  fetch("https://biometricauthenticationsystem.onrender.com/user/register", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -84,7 +84,7 @@ function handleLogIn(event) {
   };
 
   // Send a POST request to the login route
-  fetch("https://biometric-app.onrender.com/user/login", {
+  fetch("https://biometricauthenticationsystem.onrender.com/user/login", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

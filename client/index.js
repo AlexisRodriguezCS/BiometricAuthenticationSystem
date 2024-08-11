@@ -150,9 +150,12 @@ function startBackend() {
   showLoadingModal();
 
   // Make a request to the backend to start it
-  fetch("https://biometric-app.onrender.com/user/start-backend", {
-    method: "GET",
-  })
+  fetch(
+    "https://biometricauthenticationsystem.onrender.com/user/start-backend",
+    {
+      method: "GET",
+    }
+  )
     .then((response) => {
       if (response.status === 200) {
         // Hide the loading modal on success

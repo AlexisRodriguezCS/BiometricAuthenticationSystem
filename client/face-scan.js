@@ -96,7 +96,7 @@ function setupBiometricAuthentication() {
       if (capturedFaceData) {
         // Send the captured face data to the server for storage
         return fetch(
-          "https://biometric-app.onrender.com/store_biometric_data",
+          "https://biometricauthenticationsystem.onrender.com/store_biometric_data",
           {
             method: "POST",
             headers: {
@@ -142,7 +142,7 @@ function authenticateWithBiometrics() {
     .then((capturedFaceData) => {
       if (capturedFaceData) {
         return fetch(
-          "https://biometric-app.onrender.com/authenticate_with_biometrics",
+          "https://biometricauthenticationsystem.onrender.com/authenticate_with_biometrics",
           {
             method: "POST",
             headers: {

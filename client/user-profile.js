@@ -11,7 +11,7 @@
  */
 function handleLogout() {
   // Make a fetch request to the logout route on the backend
-  fetch("https://biometric-app.onrender.com/user/logout", {
+  fetch("https://biometricauthenticationsystem.onrender.com/user/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,14 +46,17 @@ function handleDeleteAccount() {
   }
 
   if (token) {
-    fetch("https://biometric-app.onrender.com/user/delete_account", {
-      method: "DELETE",
-      body: JSON.stringify({ email: userEmail }),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(
+      "https://biometricauthenticationsystem.onrender.com/user/delete_account",
+      {
+        method: "DELETE",
+        body: JSON.stringify({ email: userEmail }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           // Handle cases where account deletion fails
@@ -97,7 +100,7 @@ function fetchAndDisplayUserDetails() {
   }
 
   if (token) {
-    fetch("https://biometric-app.onrender.com/user/details", {
+    fetch("https://biometricauthenticationsystem.onrender.com/user/details", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -162,13 +165,16 @@ function refreshAccessToken() {
   }
 
   // Make a request to the server to refresh the access token
-  fetch("https://biometric-app.onrender.com/user/refresh_token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ refreshToken }),
-  })
+  fetch(
+    "https://biometricauthenticationsystem.onrender.com/user/refresh_token",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ refreshToken }),
+    }
+  )
     .then((response) => {
       if (!response.ok) {
         // Handle cases where the refresh token request fails, e.g., the refresh token is invalid

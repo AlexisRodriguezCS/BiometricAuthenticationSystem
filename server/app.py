@@ -34,11 +34,12 @@ def create_app(config_name=None):
     """
     app = Flask(__name__)
 
-     # Enable CORS for all domains on all routes
+    # Enable CORS for all domains on all routes
     CORS(app)
 
     # Enable CORS with specific origin(s)
-    CORS(app, resources={r"/user/*": {"origins": "https://biometricauthenticationsystem.netlify.app"}})
+    CORS(app, resources={
+         r"/user/*": {"origins": "https://biometricauthenticationsystem.netlify.app"}})
 
     # Load the default configuration if config_name is not provided
     if config_name is None:
